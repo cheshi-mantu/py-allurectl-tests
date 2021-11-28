@@ -45,7 +45,7 @@ if [ $? -eq 0 ]; then
     if [ "${CURRENT_VERSION}" = "${UPDATED_VERSION}" ]; then
         echo "No updated version available. Skipping." | tee -a ${logfile}
         rm ${BINARY}
-        echo "${TIME_STAMP} existing ${CURRENT_VERSION} is the same as update ${UPDATED_VERSION}" | tee -a ${logfile}
+        echo "${TIME_STAMP} existing ${CURRENT_VERSION} is the same as the update ${UPDATED_VERSION}" | tee -a ${logfile}
     else
         echo "$(date +%Y%m%d-%H%M%S) Removing previous version" | tee -a ${logfile}
         rm allurectl
