@@ -13,7 +13,7 @@ OS_BITS=$(uname -m)
 BINARY="allurectl"
 CURRENT_VERSION=$(./${BINARY} --version)
 
-echo "Current version at ${TIME_STAMP} is ${CURRENT_VERSION}" | tee -a ${logfile}
+echo "${TIME_STAMP} Current version is ${CURRENT_VERSION}" | tee -a ${logfile}
 
 if [ ${CURRENT_OS} = "Linux" ]; then
         BINARY=${BINARY}"_linux_"
