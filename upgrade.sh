@@ -4,6 +4,7 @@
 #  allurectl_linux_386
 #  allurectl_linux_amd64
 #  allurectl_linux_arm64
+
 logfile=allurectl-update.log
 
 TIME_STAMP=$(date +%Y%m%d-%H%M%S)
@@ -13,10 +14,6 @@ BINARY="allurectl"
 CURRENT_VERSION=$(./${BINARY} --version)
 
 echo "Current version at ${TIME_STAMP} is ${CURRENT_VERSION}" | tee -a ${logfile}
-# echo "##################################"
-# echo "Checking binaries for current OS"
-# echo "${CURRENT_OS}"
-# echo "##################################"
 
 if [ ${CURRENT_OS} = "Linux" ]; then
         BINARY=${BINARY}"_linux_"
