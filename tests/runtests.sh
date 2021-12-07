@@ -17,7 +17,7 @@ export ALLURE_PROJECT_ID=$(< ./set/project.txt)
 
 
 # launch's configuration
-export ALLURE_LAUNCH_NAME="${TIME_STAMP} pytest from $(TEST_HOST)"
+export ALLURE_LAUNCH_NAME="${TIME_STAMP} pytest from ${TEST_HOST}"
 export ALLURE_RESULTS=./allure-results
 export COMMAND_USED=watch
 export ALLURE_LAUNCH_TAGS="pytest, allurectl, ${COMMAND_USED}"
