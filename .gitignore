@@ -2,3 +2,6 @@
 allurectl*
 *.log
 *.pyc
+allure-results/
+allure-results-report/
+.vscode/
