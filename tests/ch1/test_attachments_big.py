@@ -16,7 +16,7 @@ def test_attach_bigimage():
     with allure.step("txt attach"):
         allure.attach("Some text content", name="TXT example", attachment_type=attachment_type.TEXT)
     with allure.step("CSV attach"):
-        allure.attach('first,second,third\none,two,three', name="CSV example", attachment_type=attachment_type.CSV)
+        allure.attach.file(os.path.join("resources", "big-table.csv"), name="9,2 Mb CSV example", attachment_type=attachment_type.CSV)
     with allure.step("JSON attach"):
         allure.attach(json.dumps({"first": 1, "second": 2}, indent=2),name="JSON example", attachment_type=attachment_type.JSON)
     with allure.step("URI list attach"):        
