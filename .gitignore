@@ -4,4 +4,5 @@ allurectl*
 *.pyc
 .idea/
 allure-results/
-Pip*
+**/Pipfile
+**/runtests.sh
