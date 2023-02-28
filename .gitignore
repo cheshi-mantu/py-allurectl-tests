@@ -2,3 +2,6 @@
 allurectl*
 *.log
 *.pyc
+.idea/
+allure-results/
+Pip*
