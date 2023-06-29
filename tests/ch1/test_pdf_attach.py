@@ -1,5 +1,6 @@
 import allure
 import time
+import os
 
 @allure.suite("cloud instance")
 @allure.feature("sending attachments")
