@@ -43,8 +43,9 @@ jobs:
           allure-token: ${{ secrets.ALLURE_TOKEN }}
           allure-project-id: ${{ secrets.ALLURE_PROJECT_ID }}
       - name: Run pytest tests
-        run: | 
-          allurectl watch -- pytest --alluredir=${ALLURE_RESULTS} || true
+        run: |
+          chmod +x exec-tests.sh
+          allurectl watch -- ./exec-tests.sh
         env:
           TEST_ENDPOINT: ${{ github.event.inputs.TEST_ENDPOINT }}
           TEST_BROWSER: ${{ github.event.inputs.TEST_BROWSER }}
