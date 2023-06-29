@@ -39,9 +39,9 @@ jobs:
       - name: install and configure allurectl
         uses: allure-framework/setup-allurectl@v1
         with:
-          allure-endpoint: ${{ secrets.ALLURE_ENDPOINT_HETZNER }}
-          allure-token: ${{ secrets.ALLURE_TOKEN_HETZNER }}
-          allure-project-id: ${{ secrets.ALLURE_PROJECT_ID_HETZNER }}
+          allure-endpoint: ${{ secrets.ALLURE_ENDPOINT }}
+          allure-token: ${{ secrets.ALLURE_TOKEN }}
+          allure-project-id: ${{ secrets.ALLURE_PROJECT_ID }}
       - name: Run pytest tests
         run: | 
           allurectl watch -- pytest --alluredir=${ALLURE_RESULTS} || true
