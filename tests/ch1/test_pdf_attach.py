@@ -1,4 +1,6 @@
 import allure
+from allure import attachment_type
+
 import time
 import os
 
