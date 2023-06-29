@@ -1,5 +1,6 @@
 import json
 import os
+import time
 
 import allure
 from allure import attachment_type
