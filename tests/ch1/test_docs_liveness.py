@@ -1,6 +1,5 @@
 import json
 import os
-import requests
 
 import allure
 from allure import attachment_type

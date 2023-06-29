@@ -45,7 +45,7 @@ jobs:
       - name: Run pytest tests
         run: |
           chmod +x exec-tests.sh
-          allurectl watch -- pytest ./tests/ch1 --alluredir=allure-results
+          allurectl watch -- pytest ./tests/ch1 --alluredir=${ALLURE_RESULTS}
         env:
           TEST_ENDPOINT: ${{ github.event.inputs.TEST_ENDPOINT }}
           TEST_BROWSER: ${{ github.event.inputs.TEST_BROWSER }}
