@@ -6,3 +6,4 @@ allurectl*
 allure-results/
 **/Pipfile
 **/runtests.sh
+.vscode/
