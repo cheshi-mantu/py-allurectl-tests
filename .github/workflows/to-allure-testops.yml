@@ -20,7 +20,6 @@ on:
         required: false
 
 env:
-  ALLURE_TESTPLAN_PATH: "./testplan.json"
   ALLURE_RESULTS: "allure-results"
   ALLURE_JOB_RUN_ID: ${{ github.event.inputs.ALLURE_JOB_RUN_ID }}
 
@@ -45,10 +44,7 @@ jobs:
       - name: Run pytest tests
         run: |
           chmod +x exec-tests.sh
-          allurectl watch -- pytest ./tests/ch1 --alluredir=${ALLURE_RESULTS} --capture=no
+          allurectl watch -- pytest tests --alluredir=${ALLURE_RESULTS}
         env:
           TEST_ENDPOINT: ${{ github.event.inputs.TEST_ENDPOINT }}
           TEST_BROWSER: ${{ github.event.inputs.TEST_BROWSER }}
-          ALLURE_TESTPLAN_PATH: "./testplan.json"
-          ALLURE_RESULTS: "allure-results"
-          ALLURE_JOB_RUN_ID: ${{ github.event.inputs.ALLURE_JOB_RUN_ID }}          
