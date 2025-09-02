@@ -39,9 +39,9 @@ jobs:
       - name: install and configure allurectl
         uses: allure-framework/setup-allurectl@v1
         with:
-          allure-endpoint: ${{ variables.ALLURE_ENDPOINT }}
+          allure-endpoint: ${{ vars.ALLURE_ENDPOINT }}
           allure-token: ${{ secrets.ALLURE_TOKEN }}
-          allure-project-id: ${{ vatiables.ALLURE_PROJECT_ID }}
+          allure-project-id: ${{ vars.ALLURE_PROJECT_ID }}
       - name: Run pytest tests
         run: |
           chmod +x exec-tests.sh
