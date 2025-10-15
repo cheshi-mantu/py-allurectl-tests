@@ -7,3 +7,5 @@ allure-results/
 **/Pipfile
 **/runtests.sh
 .vscode/
+.DS_Store
+/*.zip
